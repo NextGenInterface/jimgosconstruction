@@ -1,5 +1,5 @@
 import { Phone, ShieldCheck, Clock, Camera } from "lucide-react";
-import heroImage from "@/public/images/hero-maintenance.jpeg";
+import heroImage from "@/public/images/social.jpg";
 import Image from "next/image";
 import {
    CLIENT_TYPES,
@@ -27,7 +27,7 @@ export default function Index() {
             />
             <div className="relative mx-auto max-w-7xl px-4 py-20 md:py-28">
                <p className="eyebrow backdrop-blur-sm w-fit">Housing · Public sector · Commercial</p>
-               <h1 className="mt-4 max-w-4xl font-display text-4xl leading-[1.03] md:text-6xl">
+               <h1 className="mt-4 max-w-4xl font-bold text-4xl leading-[1.03] md:text-6xl">
                   Looking After Homes, Neighbourhoods and the People Who Live In Them
                </h1>
                <p className="mt-6 max-w-2xl text-lg">
