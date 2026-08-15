@@ -1,3 +1,27 @@
+import type { StaticImageData } from "next/image";
+import reppairImage from "@/public/images/reppair.jpg";
+import gas2Image from "@/public/images/gas2.jpg";
+import electImage from "@/public/images/elect.jpg";
+import plumbImage from "@/public/images/plumb.jpg";
+import roofImage from "@/public/images/roof.jpg";
+import carpetImage from "@/public/images/carpet.jpg";
+import drainageImage from "@/public/images/drainage.jpg";
+import kitchenImage from "@/public/images/kitchen.jpg";
+import bathImage from "@/public/images/bath.jpg";
+import generalImage from "@/public/images/general.jpg";
+import elect2Image from "@/public/images/elect2.jpg";
+import propertyImage from "@/public/images/property.jpg";
+import commericalImage from "@/public/images/commerical.jpg";
+import housing2Image from "@/public/images/housing2.jpg";
+import fgas from "@/public/images/fgas.webp";
+import napit from "@/public/images/NAPIT.webp";
+import chas from "@/public/images/chas.webp";
+import gassafe from "@/public/images/safe.webp";
+
+export const sponsorship = [fgas, napit, chas, gassafe];
+
+export const SITE_URL = "https://www.jimgosconstruction.co.uk";
+
 export const COMPANY = {
    name: "Jimgos Construction",
    tagline: "Responsive Property Maintenance & Construction",
@@ -44,6 +68,7 @@ export type MaintenanceService = {
    intro: string;
    bullets: string[];
    standards: string[];
+   image?: StaticImageData;
 };
 
 export const SERVICES: MaintenanceService[] = [
@@ -69,6 +94,7 @@ export const SERVICES: MaintenanceService[] = [
          "Urgent repairs: within 24 hours",
          "Routine repairs: within 28 days or by agreed appointment",
       ],
+      image: reppairImage,
    },
    {
       slug: "void-property-repairs",
@@ -138,6 +164,7 @@ export const SERVICES: MaintenanceService[] = [
          "Certificates issued within 24 hours of test",
          "Unsafe appliances capped and reported immediately",
       ],
+      image: gas2Image,
    },
    {
       slug: "eicr-electrical-testing",
@@ -161,6 +188,7 @@ export const SERVICES: MaintenanceService[] = [
          "C1 danger present made safe immediately",
          "Remedial quotes returned within 5 working days",
       ],
+      image: electImage,
    },
    {
       slug: "emergency-plumber-london",
@@ -184,6 +212,7 @@ export const SERVICES: MaintenanceService[] = [
          "Made safe or repaired on first visit wherever possible",
          "Same-day repairs where parts are available",
       ],
+      image: plumbImage,
    },
    {
       slug: "roofing",
@@ -207,6 +236,7 @@ export const SERVICES: MaintenanceService[] = [
          "Access solution confirmed before works start",
          "Photographic evidence from roof level",
       ],
+      image: roofImage,
    },
    {
       slug: "carpentry",
@@ -230,6 +260,7 @@ export const SERVICES: MaintenanceService[] = [
          "Permanent repair appointment booked at make-safe",
          "Fire-rated components installed to specification",
       ],
+      image: carpetImage,
    },
    {
       slug: "drainage",
@@ -253,6 +284,7 @@ export const SERVICES: MaintenanceService[] = [
          "CCTV report issued within 48 hours",
          "Recommendations priced with the survey",
       ],
+      image: drainageImage,
    },
    {
       slug: "fire-door-repairs",
@@ -299,6 +331,7 @@ export const SERVICES: MaintenanceService[] = [
          "Working kitchen facilities maintained where occupied",
          "Snags closed within 5 working days",
       ],
+      image: kitchenImage,
    },
    {
       slug: "bathroom-refurbishment",
@@ -322,6 +355,7 @@ export const SERVICES: MaintenanceService[] = [
          "Alternative facilities agreed before works start",
          "Adaptations delivered to OT specification",
       ],
+      image: bathImage,
    },
    {
       slug: "general-building-repairs",
@@ -345,6 +379,7 @@ export const SERVICES: MaintenanceService[] = [
          "Treatment plan issued with photographs",
          "Post-works follow-up inspection offered",
       ],
+      image: generalImage,
    },
    {
       slug: "emergency-electrician-london",
@@ -368,6 +403,7 @@ export const SERVICES: MaintenanceService[] = [
          "Danger isolated and made safe on arrival",
          "Minor works certificate issued after repair",
       ],
+      image: elect2Image,
    },
    {
       slug: "property-maintenance-london",
@@ -391,6 +427,7 @@ export const SERVICES: MaintenanceService[] = [
          "Jobs acknowledged within 1 hour in working time",
          "Monthly performance pack issued",
       ],
+      image: propertyImage,
    },
    {
       slug: "commercial-maintenance-london",
@@ -414,6 +451,7 @@ export const SERVICES: MaintenanceService[] = [
          "RAMS submitted before mobilisation",
          "Works phased around occupancy and trading",
       ],
+      image: commericalImage,
    },
    {
       slug: "housing-maintenance-contractor",
@@ -437,6 +475,7 @@ export const SERVICES: MaintenanceService[] = [
          "First-time fix tracked and reported",
          "Tenant satisfaction captured per job",
       ],
+      image: housing2Image,
    },
 ];
 
