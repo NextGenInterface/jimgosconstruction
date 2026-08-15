@@ -1,23 +1,34 @@
-// import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { Check } from "lucide-react";
 import { COMPANY } from "@/src/data/site";
 import Link from "next/link";
+import Image from "next/image";
 
 export function PageHero({
    eyebrow,
    title,
    intro,
    children,
+   image,
 }: {
    eyebrow: string;
    title: string;
    intro: string;
    children?: ReactNode;
+   image?: any;
 }) {
    return (
-      <section className="hero-surface text-ink-foreground">
-         <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
+      <section className="hero-surface relative isolate overflow-hidden text-ink-foreground">
+         {image && (
+            <Image
+               src={image}
+               alt="Jimgos Construction maintenance engineers outside a London housing block"
+               width={1600}
+               height={1000}
+               className="absolute inset-0 h-full w-full object-cover opacity-30"
+            />
+         )}
+         <div className="relative mx-auto max-w-7xl px-4 py-16 md:py-20">
             <p className="eyebrow">{eyebrow}</p>
             <h1 className="mt-3 max-w-4xl font-display text-4xl leading-[1.05] md:text-5xl">{title}</h1>
             <p className="mt-5 max-w-2xl text-lg">{intro}</p>

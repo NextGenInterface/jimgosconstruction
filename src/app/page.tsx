@@ -1,7 +1,5 @@
-// import { createFileRoute, Link } from "@tanstack/react-router";
 import { Phone, ShieldCheck, Clock, Camera } from "lucide-react";
 import heroImage from "@/public/images/hero-maintenance.jpeg";
-
 import Image from "next/image";
 import {
    CLIENT_TYPES,
@@ -15,33 +13,6 @@ import {
 } from "../data/site";
 import Link from "next/link";
 import { CardGrid, CtaBand, InfoCard, Section } from "../components/site/block";
-
-// export const Route = createFileRoute("/")({
-//    head: () => ({
-//       meta: [
-//          {
-//             title: "Property Maintenance & Construction London | Jimgos Construction",
-//          },
-//          {
-//             name: "description",
-//             content:
-//                "Responsive property maintenance and construction across London and the South East. 24/7 emergency repairs, compliance and planned works for housing associations, councils and commercial clients.",
-//          },
-//          {
-//             property: "og:title",
-//             content: "Property Maintenance & Construction London | Jimgos Construction",
-//          },
-//          {
-//             property: "og:description",
-//             content:
-//                "24/7 responsive repairs, voids, compliance and planned maintenance for housing associations, local authorities and commercial property managers.",
-//          },
-//          { property: "og:url", content: "/" },
-//       ],
-//       links: [{ rel: "canonical", href: "/" }],
-//    }),
-//    component: Index,
-// });
 
 export default function Index() {
    return (
