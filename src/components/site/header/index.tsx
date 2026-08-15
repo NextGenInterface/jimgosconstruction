@@ -12,7 +12,7 @@ const NAV = [
    { to: "/maintenance", label: "Maintenance" },
    { to: "/emergency", label: "24/7 Emergency" },
    { to: "/procurement", label: "Procurement" },
-   { to: "/why-housing-associations-choose-us", label: "Why Us" },
+   { to: "/why-us", label: "Why Us" },
    { to: "/case-studies", label: "Case Studies" },
    { to: "/compliance", label: "Compliance" },
    { to: "/contact", label: "Contact" },
@@ -34,10 +34,10 @@ export function Header() {
    return (
       <header className="sticky top-0 z-50 border-b border-border/60 bg-neutral-900 backdrop-blur">
          <div className="stripe-edge h-1" />
-         <div className="bg-black text-ink-foreground border-b border-neutral-800">
-            <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-1.5 text-xs">
+         <div className="bg-accent text-ink-foreground border-b border-neutral-800">
+            <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-1.5 text-xs text-foreground font-semibold">
                <p className="">Gas Safe · Fully insured · DBS checked engineers · {COMPANY.areas}</p>
-               <a href={COMPANY.phoneHref} className="font-semibold text-accent hover:underline">
+               <a href={COMPANY.phoneHref} className=" font-bold hover:underline text-foreground">
                   24/7 Emergency: {COMPANY.phone}
                </a>
             </div>
@@ -48,8 +48,8 @@ export function Header() {
                <Image
                   src={Logo}
                   alt="Jimgos Construction maintenance engineers outside a London housing block"
-                  width={200}
-                  height={200}
+                  width={175}
+                  height={175}
                />
             </Link>
 
@@ -59,8 +59,8 @@ export function Header() {
                      key={item.to}
                      href={item.to}
                      aria-current={isActive(item.to) ? "page" : undefined}
-                     className={`text-sm font-semibold transition-colors hover:text-accent text-background ${
-                        isActive(item.to) ? "text-accent" : ""
+                     className={`text-sm font-semibold transition-colors hover:text-accent ${
+                        isActive(item.to) ? "text-accent" : "text-background"
                      }`}
                   >
                      {item.label}
@@ -78,9 +78,9 @@ export function Header() {
                type="button"
                aria-label="Toggle menu"
                onClick={() => setOpen((v) => !v)}
-               className="rounded-md border border-border p-2 lg:hidden"
+               className="rounded-md border border-border p-1 lg:hidden"
             >
-               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+               {open ? <X className="h-6 w-6 text-background " /> : <Menu color="white" className="h-6 w-6" />}
             </button>
          </div>
 
@@ -105,13 +105,13 @@ export function Header() {
          )}
 
          <div className="hidden bg-background lg:block">
-            <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-3 gap-y-1 px-4 py-2 text-xs font-medium text-background">
+            <div className="mx-auto flex max-w-7xl flex-wrap items-center px-4 text-xs font-medium text-background">
                {MORE.map((item) => (
                   <Link
                      key={item.to}
                      href={item.to}
                      aria-current={isActive(item.to) ? "page" : undefined}
-                     className={`hover:text-accent text-foreground text-sm ${isActive(item.to) ? "text-accent" : ""}`}
+                     className={`hover:bg-accent text-sm border-l border-neutral-200 p-1 py-2 text-foreground ${isActive(item.to) ? "bg-accent" : "text-foreground"}`}
                   >
                      {item.label}
                   </Link>
@@ -122,8 +122,8 @@ export function Header() {
                {SERVICES.slice(0, 4).map((s) => (
                   <Link
                      key={s.slug}
-                     href={{ pathname: "/services/$slug", query: { slug: s.slug } }}
-                     className="hidden hover:text-accent xl:inline text-sm text-foreground"
+                     href={`/services/${s.slug}`}
+                     className="hidden hover:bg-accent xl:inline text-sm text-foreground border-x border-neutral-200 p-1 py-2"
                   >
                      {s.title}
                   </Link>

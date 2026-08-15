@@ -1,6 +1,4 @@
-// import { Link } from "@tanstack/react-router";
-
-import { COMPANY, SERVICES, TRUST_BADGES } from "@/src/data/site";
+import { COMPANY, SERVICES, sponsorship, TRUST_BADGES } from "@/src/data/site";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/images/JCLOGO.webp";
@@ -9,6 +7,7 @@ export function Footer() {
    return (
       <footer className="bg-neutral-800 text-ink-foreground">
          <div className="stripe-edge h-1" />
+
          <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
             <div>
                <Link href="/" className="flex flex-col leading-none">
@@ -23,10 +22,10 @@ export function Footer() {
                   {COMPANY.tagline} across {COMPANY.areas}. Supporting housing associations, local authorities,
                   commercial property managers and residential clients.
                </p>
-               <a href={COMPANY.phoneHref} className="mt-5 inline-block font-display text-xl font-bold text-accent">
+               <a href={COMPANY.phoneHref} className="mt-5 inline-block font-display text-xl font-bold">
                   {COMPANY.phone}
                </a>
-               <p className="text-sm text-ink-muted">{COMPANY.email}</p>
+               <p className="font-display text-xl">{COMPANY.email}</p>
             </div>
 
             <div>
@@ -76,7 +75,43 @@ export function Footer() {
                      <li key={b}>{b}</li>
                   ))}
                </ul>
+               <div className="">
+                  <p className="eyebrow mt-6">Opening Hours</p>
+                  <ul className="mt-3 space-y-1 text-sm text-ink-muted">
+                     <li className="flex justify-between gap-4">
+                        <span>Monday–Friday</span>
+                        <span>9:00AM – 5:30PM</span>
+                     </li>
+                     <li className="flex justify-between gap-4">
+                        <span>Saturday</span>
+                        <span>9:00AM – 3:00PM</span>
+                     </li>
+                     <li className="flex justify-between gap-4">
+                        <span>Sunday</span>
+                        <span>Closed</span>
+                     </li>
+                  </ul>
+
+                  <p className="eyebrow mt-6">Find Us</p>
+                  <address className="mt-3 text-sm text-ink-muted not-italic">
+                     299 Hoxton Street
+                     <br />
+                     London N1 5JX
+                  </address>
+               </div>
             </div>
+         </div>
+         <div className="flex justify-end w-full mx-auto max-w-7xl px-4 gap-8 my-4">
+            {sponsorship.map((img) => (
+               <Image
+                  key={img.src}
+                  src={img}
+                  alt="Emergency repair engineer attending a property at night"
+                  width={75}
+                  height={10}
+                  className="object-contain"
+               />
+            ))}
          </div>
 
          <div className="border-t border-white/10">
