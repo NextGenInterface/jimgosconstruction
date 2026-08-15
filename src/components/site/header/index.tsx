@@ -35,21 +35,23 @@ export function Header() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-neutral-900 backdrop-blur">
          <div className="stripe-edge h-1" />
          <div className="bg-accent text-ink-foreground border-b border-neutral-800">
-            <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-1.5 text-xs text-foreground font-semibold">
-               <p className="">Gas Safe · Fully insured · DBS checked engineers · {COMPANY.areas}</p>
-               <a href={COMPANY.phoneHref} className=" font-bold hover:underline text-foreground">
+            <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-1.5 text-xs text-foreground ">
+               <p className="text-[8px] sm:text-xs font-bold ">
+                  Gas Safe · Fully insured · DBS checked engineers · {COMPANY.areas}
+               </p>
+               <a href={COMPANY.phoneHref} className="hidden md:block font-bold hover:underline text-foreground">
                   24/7 Emergency: {COMPANY.phone}
                </a>
             </div>
          </div>
 
-         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
+         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2">
             <Link href="/" className="flex flex-col leading-none">
                <Image
                   src={Logo}
                   alt="Jimgos Construction maintenance engineers outside a London housing block"
-                  width={175}
-                  height={175}
+                  width={150}
+                  height={150}
                />
             </Link>
 
