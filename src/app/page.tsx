@@ -1,5 +1,5 @@
 import { Phone, ShieldCheck, Clock, Camera } from "lucide-react";
-import heroImage from "@/public/images/social.jpg";
+import heroImage from "@/public/images/lk.jpg";
 import Image from "next/image";
 import {
    CLIENT_TYPES,
@@ -17,20 +17,22 @@ import { CardGrid, CtaBand, InfoCard, Section } from "../components/site/block";
 export default function Index() {
    return (
       <>
-         <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
+         <section className="relative isolate overflow-hidden bg-white text-foreground">
             <Image
                src={heroImage}
                alt="Jimgos Construction maintenance engineers outside a London housing block"
                width={1600}
                height={1000}
-               className="absolute inset-0 h-full w-full object-cover opacity-30"
+               className="absolute inset-0 h-full w-full object-cover"
             />
+            <div className="absolute inset-0 bg-linear-to-r from-white from-30% via-white/55 via-55% to-transparent" />
             <div className="relative mx-auto max-w-7xl px-4 py-20 md:py-28">
-               <p className="eyebrow backdrop-blur-sm w-fit">Housing · Public sector · Commercial</p>
-               <h1 className="mt-4 max-w-4xl font-bold text-4xl leading-[1.03] md:text-6xl">
-                  Looking After Homes, Neighbourhoods and the People Who Live In Them
+               <p className="eyebrow backdrop-blur-sm w-fit text-accent">Housing · Public sector · Commercial</p>
+               <h1 className="mt-4 max-w-4xl font-bold text-4xl leading-[1.03] text-foreground md:text-6xl">
+                  Looking After <span className="text-accent">Homes, Neighbourhoods</span> and the People Who Live In
+                  Them
                </h1>
-               <p className="mt-6 max-w-2xl text-lg">
+               <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
                   A local maintenance team for reactive repairs, voids, compliance, planned works and 24/7 emergency
                   call-out, delivered with respect at the door and evidence in your inbox.
                </p>
@@ -43,19 +45,19 @@ export default function Index() {
                   </a>
                   <Link
                      href="/maintenance"
-                     className="rounded-md border border-white/25 px-6 py-3 font-semibold hover:bg-white/10 backdrop-blur-sm"
+                     className="rounded-md border border-border px-6 py-3 font-semibold text-foreground hover:bg-black/5 backdrop-blur-sm"
                   >
                      Housing & commercial maintenance
                   </Link>
                   <Link
                      href="/procurement"
-                     className="rounded-md border border-white/25 px-6 py-3 font-semibold hover:bg-white/10 backdrop-blur-sm"
+                     className="rounded-md border border-border px-6 py-3 font-semibold text-foreground hover:bg-black/5 backdrop-blur-sm"
                   >
                      Procurement pack
                   </Link>
                </div>
 
-               <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+               <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-foreground/80">
                   {TRUST_BADGES.map((b) => (
                      <li key={b} className="flex items-center gap-2 backdrop-blur-lg">
                         <ShieldCheck className="h-4 w-4 text-accent" /> {b}
