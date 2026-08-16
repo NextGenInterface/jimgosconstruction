@@ -36,9 +36,7 @@ export function Header() {
          <div className="stripe-edge h-1" />
          <div className="bg-accent text-ink-foreground border-b border-neutral-800">
             <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-1.5 text-xs text-foreground ">
-               <p className="text-[8px] sm:text-xs font-bold ">
-                  Gas Safe · Fully insured · DBS checked engineers · {COMPANY.areas}
-               </p>
+               <p className="text-[10px] sm:text-xs font-bold ">Gas Safe · Fully insured · {COMPANY.areas}</p>
                <a href={COMPANY.phoneHref} className="hidden md:block font-bold hover:underline text-foreground">
                   24/7 Emergency: {COMPANY.phone}
                </a>

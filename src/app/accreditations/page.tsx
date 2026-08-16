@@ -4,9 +4,9 @@ import { BadgeCheck, Clock3 } from "lucide-react";
 import vettingImage from "@/public/images/vetting.png";
 import type { Metadata } from "next";
 
-const TITLE = "Accreditations & Insurance | Gas Safe, DBS Checked, Fully Insured";
+const TITLE = "Accreditations & Insurance | Gas Safe, Fully Insured";
 const DESCRIPTION =
-   "Jimgos Construction accreditations, insurances and vetting: Gas Safe registered, public and employers liability insured, DBS checked engineers, RAMS provided. Certificates supplied on request.";
+   "Jimgos Construction accreditations, insurances and vetting: Gas Safe registered, public and employers liability insured, RAMS provided. Certificates supplied on request.";
 
 export const metadata: Metadata = {
    title: TITLE,
