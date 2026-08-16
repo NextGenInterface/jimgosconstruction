@@ -1,5 +1,5 @@
 import { Phone, ShieldCheck, Clock, Camera } from "lucide-react";
-import heroImage from "@/public/images/landing.jpeg";
+import heroImage from "@/public/images/landing.png";
 import Image from "next/image";
 import {
    CLIENT_TYPES,
@@ -21,12 +21,12 @@ export default function Index() {
             <Image
                src={heroImage}
                alt="Jimgos Construction maintenance engineers outside a London housing block"
-               width={1600}
-               height={1000}
+               width={3000}
+               height={3000}
                className="absolute inset-0 h-full object-cover w-full top-0 left-0"
             />
             <div className="absolute inset-0 bg-linear-to-r from-white from-30% via-white/50 via-60% to-transparent" />
-            <div className="relative mx-auto max-w-7xl px-4 py-20">
+            <div className="relative mx-auto max-w-7xl px-4 py-24">
                <p className="eyebrow backdrop-blur-sm w-fit text-accent">Housing · Public sector · Commercial</p>
                <h1 className="mt-4 max-w-3xl font-black text-4xl leading-[1.03] text-foreground md:text-6xl">
                   Looking After <span className="text-accent">Homes, Neighbourhoods</span> and the People Who Live In
