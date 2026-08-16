@@ -44,8 +44,8 @@ export const CLIENT_TYPES = [
 
 export const TRUST_STATS = [
    { value: "24/7", label: "Emergency call-out cover" },
-   { value: "15+", label: "Years in construction & maintenance" },
-   { value: "5,000+", label: "Jobs completed" },
+   { value: "30+", label: "Years in construction & maintenance" },
+   { value: "1.5k+", label: "Jobs completed" },
    { value: "98%", label: "Customer satisfaction" },
 ];
 
