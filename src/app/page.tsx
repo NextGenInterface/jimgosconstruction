@@ -1,5 +1,5 @@
 import { Phone, ShieldCheck, Clock, Camera } from "lucide-react";
-import heroImage from "@/public/images/lk.jpg";
+import heroImage from "@/public/images/landing.jpeg";
 import Image from "next/image";
 import {
    CLIENT_TYPES,
@@ -23,16 +23,16 @@ export default function Index() {
                alt="Jimgos Construction maintenance engineers outside a London housing block"
                width={1600}
                height={1000}
-               className="absolute inset-0 h-full w-full object-cover"
+               className="absolute inset-0 h-full object-cover w-full top-0 left-0"
             />
-            <div className="absolute inset-0 bg-linear-to-r from-white from-30% via-white/55 via-55% to-transparent" />
-            <div className="relative mx-auto max-w-7xl px-4 py-20 md:py-28">
+            <div className="absolute inset-0 bg-linear-to-r from-white from-30% via-white/50 via-60% to-transparent" />
+            <div className="relative mx-auto max-w-7xl px-4 py-20">
                <p className="eyebrow backdrop-blur-sm w-fit text-accent">Housing · Public sector · Commercial</p>
-               <h1 className="mt-4 max-w-4xl font-bold text-4xl leading-[1.03] text-foreground md:text-6xl">
+               <h1 className="mt-4 max-w-3xl font-black text-4xl leading-[1.03] text-foreground md:text-6xl">
                   Looking After <span className="text-accent">Homes, Neighbourhoods</span> and the People Who Live In
                   Them
                </h1>
-               <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+               <p className="mt-6 max-w-2xl text-lg font-bold">
                   A local maintenance team for reactive repairs, voids, compliance, planned works and 24/7 emergency
                   call-out, delivered with respect at the door and evidence in your inbox.
                </p>
@@ -57,9 +57,9 @@ export default function Index() {
                   </Link>
                </div>
 
-               <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-foreground/80">
+               <ul className="mt-12 flex flex-wrap gap-x-4 gap-y-3 text-sm text-foreground/80">
                   {TRUST_BADGES.map((b) => (
-                     <li key={b} className="flex items-center gap-2 backdrop-blur-lg">
+                     <li key={b} className="flex items-center gap-2 backdrop-blur-xs font-bold">
                         <ShieldCheck className="h-4 w-4 text-accent" /> {b}
                      </li>
                   ))}
