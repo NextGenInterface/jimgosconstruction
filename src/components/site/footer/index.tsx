@@ -101,13 +101,13 @@ export function Footer() {
                </div>
             </div>
          </div>
-         <div className="flex justify-end w-full mx-auto max-w-7xl px-4 gap-8 my-4">
+         <div className="grid grid-cols-3 gap-2 items-center sm:flex flex-wrap sm:justify-end w-full mx-auto max-w-7xl px-4 sm:gap-8 my-4">
             {sponsorship.map((img) => (
                <Image
                   key={img.src}
                   src={img}
                   alt="Emergency repair engineer attending a property at night"
-                  width={75}
+                  width={100}
                   height={10}
                   className="object-contain"
                />
