@@ -14,11 +14,13 @@ import propertyImage from "@/public/images/property.jpg";
 import commericalImage from "@/public/images/commerical.jpg";
 import housing2Image from "@/public/images/housing2.jpg";
 import fgas from "@/public/images/fgas.webp";
-import napit from "@/public/images/NAPIT.webp";
-import chas from "@/public/images/chas.webp";
+import napit from "@/public/images/NAPIT.png";
+import chas from "@/public/images/chas.png";
 import gassafe from "@/public/images/safe.webp";
+import goldmember from "@/public/images/gold_member.avif";
+import elitebadge from "@/public/images/Elite-Badge.webp";
 
-export const sponsorship = [fgas, napit, chas, gassafe];
+export const sponsorship = [fgas, napit, chas, gassafe, goldmember, elitebadge];
 
 export const SITE_URL = "https://www.jimgosconstruction.co.uk";
 
@@ -53,7 +55,6 @@ export const TRUST_BADGES = [
    "Gas Safe Registered",
    "Public Liability Insured",
    "Employers Liability Insured",
-   "DBS Checked Engineers",
    "RAMS Provided",
    "Photographic Reporting",
 ];
@@ -196,7 +197,7 @@ export const SERVICES: MaintenanceService[] = [
       short: "Leaks, burst pipes, blockages, tanks, cylinders and full installations.",
       seoTitle: "Emergency Plumber London | 24/7 Leaks, Burst Pipes & Repairs",
       seoDescription:
-         "24/7 emergency plumber in London. Burst pipes, water leaks, blockages and heating faults attended fast by insured, DBS checked engineers.",
+         "24/7 emergency plumber in London. Burst pipes, water leaks, blockages and heating faults attended fast by insured.",
       heading: "Plumbing & Emergency Plumbing",
       intro: "From a dripping tap to a burst riser flooding three flats, our plumbers carry the stock and tools to stop damage first and repair properly second.",
       bullets: [
@@ -437,7 +438,7 @@ export const SERVICES: MaintenanceService[] = [
       seoDescription:
          "Commercial maintenance in London for offices, schools, retail and healthcare: reactive callouts, PPM, compliance and out-of-hours cover.",
       heading: "Commercial Maintenance",
-      intro: "Hard FM support for commercial and public buildings, scheduled around trading hours and delivered by DBS checked, site-inducted operatives.",
+      intro: "Hard FM support for commercial and public buildings, scheduled around trading hours and delivered by site-inducted operatives.",
       bullets: [
          "Reactive callouts within business SLAs",
          "PPM schedules and statutory compliance",
@@ -642,10 +643,6 @@ export const SOCIAL_VALUE = [
       body: "Vulnerability flags are respected on every job: extra time, clear explanation, no-access welfare checks and safe working around residents.",
    },
    {
-      title: "DBS checked engineers",
-      body: "Every operative entering a home is DBS checked, uniformed and carries photo ID.",
-   },
-   {
       title: "Safeguarding awareness",
       body: "Operatives are trained to recognise and report safeguarding concerns through a defined escalation route.",
    },
@@ -730,8 +727,6 @@ export const ACCREDITATIONS_CURRENT = [
    { name: "Gas Safe Registered", note: "All gas work carried out by registered engineers." },
    { name: "Public Liability Insurance", note: "Certificate available on request for tender submissions." },
    { name: "Employers Liability Insurance", note: "Statutory cover in place for all employees." },
-   { name: "DBS Checked Engineers", note: "Every operative entering a home is DBS checked." },
-   { name: "Enhanced DBS", note: "Enhanced checks where contracts involve vulnerable residents." },
    { name: "Professional Indemnity", note: "Held where design or specification responsibility applies." },
 ];
 
@@ -866,6 +861,6 @@ export const COMMUNITY = [
    },
    {
       title: "Respect on every doorstep",
-      body: "DBS checked, uniformed, ID shown, dust sheets down and the place left clean. Standard, every visit.",
+      body: "Uniformed, ID shown, dust sheets down and the place left clean. Standard, every visit.",
    },
 ];
