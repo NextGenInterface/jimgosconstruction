@@ -81,6 +81,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
             <Footer />
             <WhatsAppButton />
+            <script
+               type="text/javascript"
+               id="hs-script-loader"
+               async
+               defer
+               src="//js-eu1.hs-scripts.com/148966065.js"
+            ></script>
          </body>
       </html>
    );
