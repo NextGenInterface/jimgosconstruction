@@ -1,5 +1,5 @@
 import { CardGrid, CtaBand, InfoCard, PageHero, Section } from "@/src/components/site/block";
-import { SOCIAL_VALUE } from "@/src/data/site";
+import { COMPANY, SOCIAL_VALUE } from "@/src/data/site";
 import social2Image from "@/public/images/diverse.png";
 import type { Metadata } from "next";
 
@@ -12,6 +12,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/social-value" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/social-value",

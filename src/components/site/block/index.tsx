@@ -10,12 +10,14 @@ export function PageHero({
    intro,
    children,
    image,
+   position = "center",
 }: {
    eyebrow: string;
    title: string;
    intro: string;
    children?: ReactNode;
    image?: any;
+   position?: "top" | "bottom" | "center";
 }) {
    return (
       <section className="hero-surface relative isolate overflow-hidden text-ink-foreground">
@@ -23,9 +25,10 @@ export function PageHero({
             <Image
                src={image}
                alt="Jimgos Construction maintenance engineers outside a London housing block"
-               width={1600}
-               height={1000}
-               className="absolute inset-0 h-full w-full object-cover opacity-30"
+               fill
+               priority
+               sizes="100vw"
+               className={`object-cover opacity-30`}
             />
          )}
          <div className="relative mx-auto max-w-7xl px-4 py-16 md:py-20">

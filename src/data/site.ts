@@ -3,7 +3,7 @@ import reppairImage from "@/public/images/reppair.jpg";
 import gas2Image from "@/public/images/gas2.jpg";
 import electImage from "@/public/images/elect.jpg";
 import plumbImage from "@/public/images/plumb.jpg";
-import roofImage from "@/public/images/roof.jpg";
+import roofImage from "@/public/images/roofing.jpeg";
 import carpetImage from "@/public/images/carpet.jpg";
 import drainageImage from "@/public/images/drainage.jpg";
 import kitchenImage from "@/public/images/kitchen.jpg";
@@ -728,12 +728,15 @@ export const ACCREDITATIONS_CURRENT = [
    { name: "Public Liability Insurance", note: "Certificate available on request for tender submissions." },
    { name: "Employers Liability Insurance", note: "Statutory cover in place for all employees." },
    { name: "Professional Indemnity", note: "Held where design or specification responsibility applies." },
+   { name: "NAPIT", note: "government-approved and UKAS-accredited." },
+   { name: "CHAS ElITE", note: "The Common Assessment Standard." },
+   { name: "CONSTRUCTION LINE GOLD", note: "Hight industry standards for governance," },
 ];
 
-export const ACCREDITATIONS_PROGRESS = [
-   { name: "NICEIC", note: "Application in progress." },
-   { name: "CHAS", note: "Assessment underway." },
-];
+// export const ACCREDITATIONS_PROGRESS = [
+//    { name: "NAPIT", note: "Application in progress." },
+//    { name: "CHAS", note: "" },
+// ];
 
 export const ACCREDITATIONS_ROADMAP = [
    "Constructionline",

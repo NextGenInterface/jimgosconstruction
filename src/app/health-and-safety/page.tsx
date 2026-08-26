@@ -1,5 +1,5 @@
 import { CardGrid, CtaBand, InfoCard, PageHero, Section } from "@/src/components/site/block";
-import { HEALTH_SAFETY } from "@/src/data/site";
+import { COMPANY, HEALTH_SAFETY } from "@/src/data/site";
 import Link from "next/link";
 import safetyImage from "@/public/images/safety.jpg";
 import type { Metadata } from "next";
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/health-and-safety" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/health-and-safety",

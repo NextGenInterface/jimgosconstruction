@@ -1,6 +1,8 @@
 import { CtaBand, PageHero, Section, TickList } from "@/src/components/site/block";
 import { COMPANY } from "@/src/data/site";
 import Link from "next/link";
+import hero from "@/public/images/tenant.jpeg";
+
 import type { Metadata } from "next";
 
 const TITLE = "Tenant Information | What to Expect From Your Repair";
@@ -12,6 +14,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/tenants" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/tenants",
@@ -55,6 +59,7 @@ export default function TenantsPage() {
             eyebrow="Tenant information"
             title="What to expect from your repair"
             intro="We work in people's homes every day. Here is exactly what happens before, during and after a visit, so there are no surprises."
+            image={hero}
          />
 
          <Section eyebrow="Step 1" title="Before we visit">

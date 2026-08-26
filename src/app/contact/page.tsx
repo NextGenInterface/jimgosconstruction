@@ -17,6 +17,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/contact" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/contact",

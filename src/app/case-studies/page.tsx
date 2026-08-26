@@ -1,5 +1,5 @@
 import { PageHero, CtaBand, Section } from "@/src/components/site/block";
-import { CASE_STUDIES } from "@/src/data/site";
+import { CASE_STUDIES, COMPANY } from "@/src/data/site";
 import type { Metadata } from "next";
 
 const TITLE = "Case Studies | Property Maintenance & Repair Projects";
@@ -11,6 +11,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/case-studies" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/case-studies",
