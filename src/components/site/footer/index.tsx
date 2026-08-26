@@ -101,16 +101,16 @@ export function Footer() {
                </div>
             </div>
          </div>
-         <div className="grid grid-cols-3 gap-2 items-center sm:flex flex-wrap sm:justify-end w-full mx-auto max-w-7xl px-4 sm:gap-8 my-4">
+         <div className="grid grid-cols-3 gap-2  sm:flex flex-wrap sm:justify-end w-full mx-auto max-w-7xl px-4 sm:gap-8 my-4">
             {sponsorship.map((img) => (
-               <Image
-                  key={img.src}
-                  src={img}
-                  alt="Emergency repair engineer attending a property at night"
-                  width={100}
-                  height={10}
-                  className="object-contain"
-               />
+               <div key={img.src} className="w-20 h-20 relative">
+                  <Image
+                     src={img}
+                     alt="Emergency repair engineer attending a property at night"
+                     fill
+                     className="object-contain h-full w-full"
+                  />
+               </div>
             ))}
          </div>
 

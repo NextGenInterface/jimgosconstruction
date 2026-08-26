@@ -1,6 +1,6 @@
 import { CardGrid, CtaBand, InfoCard, PageHero, Section } from "@/src/components/site/block";
 import { SOCIAL_VALUE } from "@/src/data/site";
-import social2Image from "@/public/images/social2.jpg";
+import social2Image from "@/public/images/diverse.png";
 import type { Metadata } from "next";
 
 const TITLE = "Social Value | Community Commitments & Reporting";
