@@ -15,12 +15,12 @@ import commericalImage from "@/public/images/commerical.jpg";
 import housing2Image from "@/public/images/housing2.jpg";
 import fgas from "@/public/images/fgas.webp";
 import napit from "@/public/images/NAPIT.png";
-import chas from "@/public/images/chas.png";
 import gassafe from "@/public/images/safe.webp";
-import goldmember from "@/public/images/gold_member.avif";
+import goldmember from "@/public/images/gold_member.png";
 import elitebadge from "@/public/images/Elite-Badge.webp";
+import ssiplogo from "@/public/images/ssiplogo.png";
 
-export const sponsorship = [fgas, napit, chas, gassafe, goldmember, elitebadge];
+export const sponsorship = [fgas, napit, gassafe, goldmember, elitebadge, ssiplogo];
 
 export const SITE_URL = "https://www.jimgosconstruction.co.uk";
 
