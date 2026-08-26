@@ -15,12 +15,12 @@ export const metadata: Metadata = {
       title: TITLE,
       description: DESCRIPTION,
       url: "/social-value",
-      images: ["/images/social2.jpg"],
+      images: ["/images/diverse.png"],
    },
    twitter: {
       title: TITLE,
       description: DESCRIPTION,
-      images: ["/images/social2.jpg"],
+      images: ["/images/diverse.png"],
    },
 };
 
