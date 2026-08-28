@@ -21,9 +21,10 @@ export default function Index() {
             <Image
                src={heroImage}
                alt="Jimgos Construction maintenance engineers outside a London housing block"
-               width={3000}
-               height={3000}
-               className="absolute inset-0 h-full object-cover w-full top-0 left-0"
+               fill
+               priority
+               sizes="100vw"
+               className="object-cover"
             />
             <div className="absolute inset-0 bg-linear-to-r from-white from-30% via-white/50 via-60% to-transparent" />
             <div className="relative mx-auto max-w-7xl px-4 py-24">
@@ -106,7 +107,7 @@ export default function Index() {
                      body={s.short}
                      footer={
                         <Link
-                           href={{ pathname: "/services/$slug", query: { slug: s.slug } }}
+                           href={{ pathname: `/services/${s.slug}`, query: { slug: s.slug } }}
                            className="text-sm font-bold  hover:underline"
                         >
                            View service →

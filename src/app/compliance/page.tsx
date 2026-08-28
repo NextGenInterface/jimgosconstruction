@@ -13,6 +13,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/compliance" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/compliance",

@@ -1,5 +1,5 @@
-import { CtaBand, PageHero, Section, TickList } from "@/src/components/site/block";
-import { ACCREDITATIONS_CURRENT, ACCREDITATIONS_PROGRESS, ACCREDITATIONS_ROADMAP } from "@/src/data/site";
+import { CtaBand, PageHero, Section } from "@/src/components/site/block";
+import { ACCREDITATIONS_CURRENT, COMPANY } from "@/src/data/site";
 import { BadgeCheck, Clock3 } from "lucide-react";
 import vettingImage from "@/public/images/vetting.png";
 import type { Metadata } from "next";
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/accreditations" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/accreditations",
@@ -47,7 +49,7 @@ export default function AccreditationsPage() {
             </div>
          </Section>
 
-         <Section tone="surface" eyebrow="In application" title="Currently being assessed">
+         {/* <Section tone="surface" eyebrow="In application" title="Currently being assessed">
             <div className="grid gap-5 md:grid-cols-2">
                {ACCREDITATIONS_PROGRESS.map((a) => (
                   <div key={a.name} className="rounded-lg border border-border bg-card p-6">
@@ -57,11 +59,11 @@ export default function AccreditationsPage() {
                   </div>
                ))}
             </div>
-         </Section>
+         </Section> */}
 
-         <Section eyebrow="Roadmap" title="Planned certifications">
+         {/* <Section eyebrow="Roadmap" title="Planned certifications">
             <TickList items={ACCREDITATIONS_ROADMAP} />
-         </Section>
+         </Section> */}
 
          <CtaBand
             title="Need certificates for a pre-qualification questionnaire?"

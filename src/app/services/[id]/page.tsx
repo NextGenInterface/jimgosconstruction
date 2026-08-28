@@ -1,5 +1,5 @@
 import { CtaBand, PageHero, Section, TickList } from "@/src/components/site/block";
-import { SERVICES } from "@/src/data/site";
+import { SERVICES, COMPANY } from "@/src/data/site";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -27,9 +27,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       description: service.seoDescription,
       alternates: { canonical: `/services/${id}` },
       openGraph: {
+         type: "article",
+         siteName: COMPANY.name,
          title: service.seoTitle,
          description: service.seoDescription,
-         type: "article",
          url: `/services/${id}`,
          images,
       },

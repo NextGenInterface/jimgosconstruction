@@ -1,5 +1,7 @@
 import { CardGrid, CtaBand, InfoCard, PageHero, Section } from "@/src/components/site/block";
-import { SERVICES } from "@/src/data/site";
+import { SERVICES, COMPANY } from "@/src/data/site";
+import hero from "@/public/images/service.jpeg";
+
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -12,6 +14,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/services" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/services",
@@ -31,6 +35,8 @@ export default function ServicesIndex() {
             eyebrow="Services"
             title="Every service, on its own page"
             intro="Scope, standards and response times set out service by service, so clients and procurement teams can find exactly what they need."
+            image={hero}
+            // position="top"
          />
          <Section>
             <CardGrid>

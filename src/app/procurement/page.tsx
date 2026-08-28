@@ -1,5 +1,5 @@
 import { CardGrid, CtaBand, InfoCard, PageHero, Section } from "@/src/components/site/block";
-import { CLIENT_TYPES, PROCUREMENT } from "@/src/data/site";
+import { CLIENT_TYPES, PROCUREMENT, COMPANY } from "@/src/data/site";
 import Link from "next/link";
 import housingImage from "@/public/images/housing.jpg";
 import type { Metadata } from "next";
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/procurement" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/procurement",

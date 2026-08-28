@@ -1,5 +1,5 @@
 import { CardGrid, CtaBand, InfoCard, PageHero, Section } from "@/src/components/site/block";
-import { RESPONSE_COMMITMENTS, TESTIMONIALS, WHY_US } from "@/src/data/site";
+import { COMPANY, RESPONSE_COMMITMENTS, TESTIMONIALS, WHY_US } from "@/src/data/site";
 import housingAssImage from "@/public/images/housingass.jpg";
 import type { Metadata } from "next";
 
@@ -12,6 +12,8 @@ export const metadata: Metadata = {
    description: DESCRIPTION,
    alternates: { canonical: "/why-us" },
    openGraph: {
+      type: "website",
+      siteName: COMPANY.name,
       title: TITLE,
       description: DESCRIPTION,
       url: "/why-us",
