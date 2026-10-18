@@ -2,8 +2,11 @@
 
 import { useState, type FormEvent } from "react";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { COMPANY } from "@/src/data/site";
 
 const WEB3FORMS_ACCESS_KEY = "147fca45-40e1-46cf-907a-b21172df068e";
+
+const ENQUIRY_TYPES = ["General message", "Enquiry", "Complaint", "Feedback"] as const;
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -17,7 +20,7 @@ export function ContactForm() {
       const form = event.currentTarget;
       const formData = new FormData(form);
       const payload = Object.fromEntries(formData.entries());
-      payload.access_key = WEB3FORMS_ACCESS_KEY;
+      payload.subject = `${payload.enquiry_type} from the website contact form`;
 
       try {
          const response = await fetch("https://api.web3forms.com/submit", {
@@ -61,11 +64,39 @@ export function ContactForm() {
    }
 
    return (
-      <form onSubmit={handleSubmit} className="rounded-lg border border-border bg-card p-6 md:p-8">
+      <form
+         action="https://api.web3forms.com/submit"
+         method="POST"
+         onSubmit={handleSubmit}
+         className="rounded-lg border border-border bg-card p-6 md:p-8"
+      >
+         <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+         <input type="hidden" name="from_name" value={`${COMPANY.name} Website`} />
          <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
-         <input type="hidden" name="subject" value="New enquiry from the website contact form" />
 
-         <div className="grid gap-5 md:grid-cols-2">
+         <fieldset>
+            <legend className="text-sm font-semibold">What is your message about?</legend>
+            <div className="mt-2 grid grid-cols-2 gap-3 md:grid-cols-4">
+               {ENQUIRY_TYPES.map((type, i) => (
+                  <label
+                     key={type}
+                     className="flex cursor-pointer items-center gap-2 rounded-md border border-border bg-background px-3 py-2.5 text-sm has-[:checked]:border-accent has-[:checked]:font-semibold"
+                  >
+                     <input
+                        type="radio"
+                        name="enquiry_type"
+                        value={type}
+                        defaultChecked={i === 0}
+                        required
+                        className="accent-accent"
+                     />
+                     {type}
+                  </label>
+               ))}
+            </div>
+         </fieldset>
+
+         <div className="mt-5 grid gap-5 md:grid-cols-2">
             <div>
                <label htmlFor="name" className="text-sm font-semibold">
                   Name
