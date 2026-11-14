@@ -55,7 +55,7 @@ export default function EmergencyPage() {
                      <Phone className="h-4 w-4" /> Emergency line: {COMPANY.phone}
                   </a>
                   <Link
-                     href="/report-an-emergency"
+                     href="/contact"
                      className="rounded-md border border-white/25 px-6 py-3 font-semibold hover:bg-white/10"
                   >
                      Report an emergency online

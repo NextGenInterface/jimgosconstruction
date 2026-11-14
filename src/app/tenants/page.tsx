@@ -84,7 +84,7 @@ export default function TenantsPage() {
                . If you smell gas, leave the property and call the National Gas Emergency Service on 0800 111 999 first.
             </p>
             <Link
-               href="/report-an-emergency"
+               href="/contact"
                className="mt-6 inline-block rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground hover:opacity-90"
             >
                Report an emergency

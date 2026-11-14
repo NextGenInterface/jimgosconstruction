@@ -25,7 +25,9 @@ export function Footer() {
                <a href={COMPANY.phoneHref} className="mt-5 inline-block font-display text-xl font-bold">
                   {COMPANY.phone}
                </a>
-               <p className="font-display text-xl">{COMPANY.email}</p>
+               <a href={`mailto:${COMPANY.email}`} className="block font-display text-xl hover:text-accent">
+                  {COMPANY.email}
+               </a>
             </div>
 
             <div>
@@ -34,7 +36,7 @@ export function Footer() {
                   {SERVICES.slice(0, 9).map((s) => (
                      <li key={s.slug}>
                         <Link
-                           href={{ pathname: "/services/$slug", query: { slug: s.slug } }}
+                           href={`/services/${s.slug}`}
                            className="hover:text-accent"
                         >
                            {s.title}
@@ -50,7 +52,7 @@ export function Footer() {
                   {[
                      { to: "/maintenance", label: "Housing & Commercial Maintenance" },
                      { to: "/emergency", label: "24/7 Emergency Repairs" },
-                     { to: "/report-an-emergency", label: "Report an Emergency" },
+                     { to: "/contact", label: "Report an Emergency" },
                      { to: "/procurement", label: "Procurement & Tenders" },
                      { to: "/social-value", label: "Social Value" },
                      { to: "/health-and-safety", label: "Health & Safety" },

@@ -50,7 +50,7 @@ export default function MaintenancePage() {
                      body={s.short}
                      footer={
                         <Link
-                           href={{ pathname: "/services/$slug", query: { slug: s.slug } }}
+                           href={`/services/${s.slug}`}
                            className="text-sm font-bold text-accent hover:underline"
                         >
                            View service →
