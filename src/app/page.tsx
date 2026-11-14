@@ -107,7 +107,7 @@ export default function Index() {
                      body={s.short}
                      footer={
                         <Link
-                           href={{ pathname: `/services/${s.slug}`, query: { slug: s.slug } }}
+                           href={`/services/${s.slug}`}
                            className="text-sm font-bold  hover:underline"
                         >
                            View service →
